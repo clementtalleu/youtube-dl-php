@@ -202,7 +202,7 @@ class YoutubeDl
 
     protected function processDownload(Process $process): Video
     {
-        if (!preg_match('/Writing video description metadata as JSON to:\s(.+)/', $process->getOutput(), $m)) {
+        if (!preg_match('/Writing video (description)? metadata as JSON to:\s(.+)/', $process->getOutput(), $m)) {
             throw new YoutubeDlException('Failed to detect metadata file.');
         }
 
