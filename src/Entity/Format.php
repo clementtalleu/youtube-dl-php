@@ -36,7 +36,10 @@ class Format extends AbstractEntity
         return $this->get('format_note');
     }
 
-    public function getAbr(): ?int
+    /**
+     * @return float|int|null
+     */
+    public function getAbr()
     {
         return $this->get('abr');
     }
@@ -101,7 +104,10 @@ class Format extends AbstractEntity
         return $this->get('resolution');
     }
 
-    public function getVbr(): ?int
+    /**
+     * @return float|int|null
+     */
+    public function getVbr()
     {
         return $this->get('vbr');
     }
